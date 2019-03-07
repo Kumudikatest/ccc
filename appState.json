@@ -1,0 +1,119 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "38c7614e-664a-4f84-8d61-01d2efdabf75": {
+        "id": "38c7614e-664a-4f84-8d61-01d2efdabf75",
+        "parent": null,
+        "name": "ccc",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "99ee7b78-d4ab-4df8-b0da-ea281cb4e715"
+        ],
+        "isRemovable": false,
+        "filePath": "ccc"
+      },
+      "99ee7b78-d4ab-4df8-b0da-ea281cb4e715": {
+        "id": "99ee7b78-d4ab-4df8-b0da-ea281cb4e715",
+        "parent": "38c7614e-664a-4f84-8d61-01d2efdabf75",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "ccc/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "triggers": [
+          {
+            "resourceName": "ddbUSERSTABLE",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": 100
+            }
+          }
+        ],
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "38c7614e-664a-4f84-8d61-01d2efdabf75",
+    "openFiles": [
+      "99ee7b78-d4ab-4df8-b0da-ea281cb4e715"
+    ],
+    "currentFileId": "99ee7b78-d4ab-4df8-b0da-ea281cb4e715",
+    "resources": {
+      "ddbUSERSTABLE": {
+        "name": "ddbUSERSTABLE",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/USERS_TABLE",
+            "name": "USERS_TABLE",
+            "partitionKey": "userId",
+            "partitionKeyType": "N",
+            "hasSortKey": true,
+            "sortKey": "name",
+            "sortKeyType": "S",
+            "mode": 1,
+            "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/USERS_TABLE/stream/2019-03-05T09:15:43.585"
+          },
+          "parameters": {
+            "Key": {},
+            "Item": {},
+            "ExpressionAttributeValues": {}
+          },
+          "triggerParams": {
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 100
+          },
+          "validator": {
+            "validatableFields": {},
+            "validity": true
+          },
+          "valid": true
+        },
+        "globallyEditable": false
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "ccc",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1551958308764
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "ccc",
+      "url": "https://github.com/Kumudikatest/ccc"
+    }
+  }
+}
